@@ -1,8 +1,121 @@
-    .attribution {
-      font-size: 0.6875rem;
-      text-align: center;
-    }
+:root {
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Cream);
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--Grey);
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--Green-700);
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.different-font {
+  font-family: 'Fraunces', serif;
+}
+
+.product-card {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin-block-start: 4rem;
+  margin-block-end: 1.9rem;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.8rem;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.8rem;
+  
+}
+
+.price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 0.5rem;
+}
+
+.current-price {
+  color: var(--Green-500);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.original-price {
+  font-size: 0.85rem;
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--Green-500);
+  color: var(--White);
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--Green-700);
+}
+
+button:focus-visible {
+  outline: 2px solid hsl(45, 83%, 52%);
+  outline-offset: 2px;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
