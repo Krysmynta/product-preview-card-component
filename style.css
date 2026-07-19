@@ -1,4 +1,6 @@
 :root {
+  font-size: calc(0.75rem + 1.5vw);
+
 
   --Green-500: hsl(158, 36%, 37%);
   --Green-700: hsl(158, 42%, 18%);
