@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +24,7 @@
 <body>
   <main>
     <article class="product-card">
-      <img src="images/image-product-mobile.jpg" alt="bottle of perfume" class="product-image-mobile" />
+      <img src="images/image-product-mobile.jpg" alt="bottle of perfume" class="product-image-mobile" width="600" height="900" loading="eager" fetchpriority="high"/>
       <div class="product-info">
         <p class="category">Perfume</p>
 
@@ -39,7 +38,7 @@
           <p class="current-price">$149.99</p>
           <p class="original-price">$169.99</p>
         </div>
-        <button><img src="images/icon-cart.svg" alt=" ">Add to Cart</button>
+        <button><img aria-hidden="true" src="images/icon-cart.svg" alt=" " width="32" height="32">Add to Cart</button>
       </div>
     </article>
 

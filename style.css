@@ -1,7 +1,4 @@
 :root {
-  font-size: calc(0.75rem + 1.5vw);
-
-
   --Green-500: hsl(158, 36%, 37%);
   --Green-700: hsl(158, 42%, 18%);
 
@@ -11,6 +8,7 @@
   --White: hsl(0, 0%, 100%);
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,10 +17,19 @@
 
 body {
   background-color: var(--Cream);
-  padding: 1rem;
+  padding-inline: 1rem;
+  padding-block-start: 3rem;
   font-family: 'Montserrat', sans-serif;
+  font-display: swap;
   color: var(--Grey);
+  height: 100vh;
 }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 img {
   max-inline-size: 100%;
@@ -32,12 +39,12 @@ img {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 1rem + 1.5vw, 3rem);
   color: var(--Green-700);
 }
 
 p {
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.875rem + 0.1vw, 1.5rem);
   line-height: 1.5rem;
 }
 
@@ -50,8 +57,6 @@ p {
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
-  margin-block-start: 4rem;
-  margin-block-end: 1.9rem;
 }
 
 .product-info {
@@ -64,8 +69,7 @@ p {
 .category {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  font-size: 0.8rem;
-  
+  font-size: 0.8rem; 
 }
 
 .price {
@@ -77,12 +81,12 @@ p {
 
 .current-price {
   color: var(--Green-500);
-  font-size: 2rem;
+  font-size: clamp(2rem, 1rem + 1.5vw, 3rem);
   font-weight: 700;
 }
 
 .original-price {
-  font-size: 0.85rem;
+  font-size: clamp(0.9rem, 0.9rem + 0.5vw, 1.1rem);
   text-decoration: line-through;
 }
 
@@ -115,9 +119,38 @@ button:focus-visible {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
-  margin-block-end: 1rem;
+  margin-block: 1.6rem;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (min-width: 600px) {
+
+  body {
+    padding: 5rem 5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    max-height: 90vh;
+    width: clamp(8rem, 40rem + 5vw, 90rem);
+  }
+
+.product-image-mobile {
+    border-radius: 0.5rem 0 0 0.5rem;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .product-info {
+    padding: 2rem 2.5rem;
+  }
